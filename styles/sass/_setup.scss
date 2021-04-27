@@ -54,12 +54,14 @@ ul {
 a {
     text-decoration: none;
     color: $mistyRose;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     transition: all 0.3s ease-in-out;
 
     &:hover,
     &:focus {
-        border-bottom: 2px solid $darkBlue;
+        transform: scale(1.2);
+        border-bottom: 3px solid $darkBlue;
+        text-shadow: 0 0 5px $darkBlue;
     }
 }
 img {
