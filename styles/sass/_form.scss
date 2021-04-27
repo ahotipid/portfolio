@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+    margin: 20px 0;
+    
+    label {
+        display: none;
+    }
+    input,
+    textarea,
+    button{
+        font-size: 1rem;
+        font-family: $nunito;
+        color: $mistyRose;
+        padding: 10px 0;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $darkBlue;
+    }
+
+    textarea {
+        resize: none;
+        height: 200px;
+        scrollbar-color: $grey;
+        
+    }
+    button {
+        align-self: flex-end;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        transition: all 0.4s ease-in-out;
+        &:hover,
+        &:focus {
+            color: $darkBlue;
+            border-bottom: 1px solid $darkBlue;
+        }
+    }
+    i {
+        font-size: 1.2rem;
+    }
+}

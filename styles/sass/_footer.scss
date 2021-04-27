@@ -1,0 +1,14 @@
+footer {
+    border-top: 1px solid $mistyRose;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    p {
+        color: $darkBlue;
+        font-size: 0.8rem;
+        padding: 5px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,63 @@
+@media (max-width:950px) {
+    form {
+        width: 100%;  
+    }
+    .portfolio {
+        li {
+            .contentContainer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            h3 {
+                width: 100%;
+            }
+            p {
+                width: 100%;
+            }
+        }
+        li:hover,
+        li:focus {
+            .imageContainer {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
+@media (max-width:680px) {
+    header {
+        .heading {
+            margin-left: 10vw;
+        }
+    }
+    nav.headMenu ul{
+        visibility: hidden;
+    }
+    nav.burgerMenu {
+        visibility: visible;
+    }
+}
+@media (max-width:520px) {
+    header {
+        .heading {
+            margin-left: 0;
+        }
+    }
+    section {
+        padding: 40px 0;
+        div.indent {
+            margin-left: 0;
+        }
+    }
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        p {
+            color: $darkBlue;
+            font-size: 0.8rem;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+nav.headMenu {
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // position: relative;
+    ul {
+        margin: 0 auto;
+        display: flex;
+        li {
+            padding: 10px;
+            margin: 0 10px;
+        }
+        a {
+            padding: 5px 0 ;
+            font-size: 0.8rem;
+        }
+    }
+}
+.logo {
+    font-family: $antic;
+    font-size: 2rem;
+    color: $darkBlue;
+    justify-self: flex-start;
+    position: absolute;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+nav.burgerMenu {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    visibility: hidden;
+
+    .burgerIcon {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        //hover and focus state of burger icon
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            .line {
+                background-color: $darkBlue;
+            }
+        }
+        .line {
+            width: 30px;
+            height: 1px;
+            background-color: $mistyRose;
+            margin-bottom: 7px;
+            transition: all 0.3s linear;
+        }
+        .line2 {
+            width: 20px;
+            align-self: flex-end;
+        }
+    }
+    
+    //rules to make burgerIcon transform to X icon
+    // this will trigger when js toggle class animateBurgerIcon to the burgerIcon
+    .animateBurgerIcon .line1 {
+        transform: rotate(45deg);
+        transform-origin: 0% 50%;
+    }
+    .animateBurgerIcon .line2 {
+        display: none;   
+    }
+    .animateBurgerIcon .line3 {
+        transform: rotate(-45deg) translate(-9px,9px);
+        transform-origin: 0% 50%;
+    }
+    
+    //ul styles
+    ul {
+        background-color: $black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+
+        li {
+            font-family: $antic;
+            font-size: 1.5rem;
+            text-align: left;
+            padding-left: 40px;
+        }  
+    }
+
+    //rule to make ul height become 100vh when toggle
+    .addHeight {
+        height: 100vh;
+    }
+}

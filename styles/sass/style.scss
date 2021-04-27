@@ -1,0 +1,203 @@
+@import 'variables';
+@import 'setup';
+@import 'navBar';
+@import 'form';
+@import 'footer';
+
+
+
+header {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative; 
+    
+    .heading {
+        position: relative;
+        margin-left: 25vw;
+        padding: 0;
+        h1 {
+            font-size: 3rem;
+            padding: 15px 0;
+        }
+        .hello {
+            font-size: 3rem;
+        }
+    }
+    .heading::before {
+        content: '';
+        position: absolute;
+        left: 0%;
+        width: 120%;
+        height: 103%;
+        background: linear-gradient(90deg, transparent 0%, $black 10%, $black 100%);
+        animation: fadeIn 4s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+        0% {
+            left: -20%;
+        }
+        100% {
+            left: 120%;
+        }
+    }
+    
+}
+
+section {
+    padding: 40px 0;
+    .indent {
+        margin-left: 25vw;
+    }
+}
+
+.about {
+    .imageContainer {
+        margin-left: 0;
+        width: 200px;
+    }
+}
+.toolkit {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+            width: 25%;
+            text-align: center;
+            margin: 30px 0;
+        }
+        i {
+            font-size: 2.5rem;
+        }
+        .fa-mobile-alt {
+            font-size: 1.5rem;
+        }
+    }
+}
+.portfolio {
+    h3 {
+        span {
+            font-size: 0.8rem;
+            margin-right: 10px;
+            position: relative;
+            top: -20px;
+        }
+    }
+    li {
+        width: 100%;
+        padding: 30px 0;
+        border-top: 1px solid $mistyRose;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transition: all 0.5s ease-in-out;
+        .contentContainer {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .imageContainer {
+            width: 0%;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+        }
+        h3 {
+            width: 50%;
+        }
+        p {
+            width: 50%;
+            padding-bottom: 0;
+            font-size: 0.8rem;
+        }
+    }
+    li:hover,
+    li:focus {
+        color: $darkBlue;
+        border-top: 1px solid $darkBlue;
+        transform: scale(1.05);
+        .imageContainer {
+            width: 50%;
+            height: 300px;
+        }
+    }
+}
+.contact {
+    position: relative;
+    a {
+        &:hover,
+        &:focus {
+            color: $darkBlue;
+            border-bottom: transparent;
+        }
+    }
+    
+    h3,
+    .emailAddress {
+        padding: 20px 0;
+    }
+
+    .socialMedia {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        li {
+            padding: 20px;
+            font-size: 0.8rem;
+        }
+        li:first-child {
+            padding-left: 0;
+            margin-left: 0;
+        }
+        
+    }
+}
+
+.downArrow,
+.scrollUp {
+    color: $mistyRose;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: bounce 2s ease-in-out infinite;
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(-5px);
+        }
+        50% {
+            transform: translateY(-13px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+    }
+    &:hover,
+        &:focus {
+            color: $darkBlue;
+            border-bottom: transparent;
+        }
+    i {
+        font-size: 1.2rem;
+    }
+}
+
+.downArrow{
+    color: $mistyRose;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    i{
+        font-size: 2rem;
+    }
+}
+
+@import 'mediaQuery';
