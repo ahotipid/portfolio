@@ -678,7 +678,7 @@ section .indent {
 .portfolio li:hover .imageContainer,
 .portfolio li:focus .imageContainer {
   width: 50%;
-  height: 300px;
+  height: 350px;
 }
 
 .portfolio .contentContainer {
