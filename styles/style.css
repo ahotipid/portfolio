@@ -231,7 +231,6 @@ html {
 html {
   scroll-behavior: smooth;
   font-size: 125%;
-  overflow-x: hidden;
 }
 
 body {
@@ -240,6 +239,8 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.05rem;
+  line-height: 140%;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -260,6 +261,7 @@ h1,
 h2,
 h3 {
   font-family: "Antic Didone", serif;
+  line-height: 140%;
 }
 
 h2 {
@@ -275,16 +277,23 @@ ul {
   list-style: none;
 }
 
+p {
+  font-size: 0.9rem;
+}
+
 a {
   text-decoration: none;
   color: #ffe1d9;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 a:hover, a:focus {
-  border-bottom: 2px solid #394c98;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-bottom: 3px solid #5667ad;
+  text-shadow: 0 0 5px #5667ad;
 }
 
 img {
@@ -329,7 +338,7 @@ nav.headMenu ul a {
 .logo {
   font-family: "Antic Didone", serif;
   font-size: 2rem;
-  color: #394c98;
+  color: #5667ad;
   justify-self: flex-start;
   position: absolute;
   top: 10px;
@@ -363,7 +372,7 @@ nav.burgerMenu .burgerIcon:hover, nav.burgerMenu .burgerIcon:focus {
 }
 
 nav.burgerMenu .burgerIcon:hover .line, nav.burgerMenu .burgerIcon:focus .line {
-  background-color: #394c98;
+  background-color: #5667ad;
 }
 
 nav.burgerMenu .burgerIcon .line {
@@ -458,7 +467,7 @@ form button {
   padding: 10px 0;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #394c98;
+  border-bottom: 1px solid #5667ad;
 }
 
 form textarea {
@@ -471,14 +480,15 @@ form button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   cursor: pointer;
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid transparent;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 form button:hover, form button:focus {
-  color: #394c98;
-  border-bottom: 1px solid #394c98;
+  color: #5667ad;
+  border-bottom: 3px solid #5667ad;
+  text-shadow: 0 0 5px #5667ad;
 }
 
 form i {
@@ -504,7 +514,7 @@ footer {
 }
 
 footer p {
-  color: #394c98;
+  color: #5667ad;
   font-size: 0.8rem;
   padding: 5px;
   margin: 0;
@@ -536,11 +546,12 @@ header .heading {
 
 header .heading h1 {
   font-size: 3rem;
-  padding: 15px 0;
+  margin-bottom: 14px;
 }
 
 header .heading .hello {
   font-size: 3rem;
+  margin-bottom: 0;
 }
 
 header .heading::before {
@@ -558,18 +569,22 @@ header .heading::before {
 @-webkit-keyframes fadeIn {
   0% {
     left: -20%;
+    width: 120%;
   }
   100% {
     left: 120%;
+    width: 0%;
   }
 }
 
 @keyframes fadeIn {
   0% {
     left: -20%;
+    width: 120%;
   }
   100% {
     left: 120%;
+    width: 0%;
   }
 }
 
@@ -584,6 +599,10 @@ section .indent {
 .about .imageContainer {
   margin-left: 0;
   width: 200px;
+}
+
+.about p {
+  width: 70%;
 }
 
 .toolkit ul {
@@ -660,13 +679,12 @@ section .indent {
 .portfolio li p {
   width: 50%;
   padding-bottom: 0;
-  font-size: 0.8rem;
 }
 
 .portfolio li:hover,
 .portfolio li:focus {
-  color: #394c98;
-  border-top: 1px solid #394c98;
+  color: #5667ad;
+  border-top: 1px solid #5667ad;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -674,7 +692,7 @@ section .indent {
 .portfolio li:hover .imageContainer,
 .portfolio li:focus .imageContainer {
   width: 50%;
-  height: 300px;
+  height: 280px;
 }
 
 .portfolio .contentContainer {
@@ -698,28 +716,35 @@ section .indent {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .portfolio .imageContainer a {
-  font-size: 0.8rem;
-  margin-top: 10px;
+  font-size: 1rem;
 }
 
 .contact {
   position: relative;
 }
 
+.contact p {
+  width: 70%;
+}
+
 .contact a:hover, .contact a:focus {
-  color: #394c98;
+  color: #5667ad;
   border-bottom: transparent;
 }
 
 .contact h3,
 .contact .emailAddress {
   padding: 20px 0;
+}
+
+.contact .emailAddress {
+  font-size: 1.2rem;
 }
 
 .contact .socialMedia {
@@ -736,7 +761,7 @@ section .indent {
 
 .contact .socialMedia li {
   padding: 20px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .contact .socialMedia li:first-child {
@@ -794,7 +819,7 @@ section .indent {
 .downArrow:hover, .downArrow:focus,
 .scrollUp:hover,
 .scrollUp:focus {
-  color: #394c98;
+  color: #5667ad;
   border-bottom: transparent;
 }
 
@@ -808,7 +833,7 @@ section .indent {
   font-size: 1.2rem;
   position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 40px;
 }
 
 .downArrow i {
@@ -836,8 +861,10 @@ section .indent {
   }
   .portfolio li:hover .imageContainer,
   .portfolio li:focus .imageContainer {
+    width: 70%;
+  }
+  .contact p {
     width: 100%;
-    height: 300px;
   }
 }
 
@@ -850,6 +877,10 @@ section .indent {
   }
   nav.burgerMenu {
     visibility: visible;
+  }
+  .portfolio li:hover .imageContainer,
+  .portfolio li:focus .imageContainer {
+    width: 100%;
   }
 }
 
@@ -876,7 +907,7 @@ section .indent {
             align-items: flex-start;
   }
   footer p {
-    color: #394c98;
+    color: #5667ad;
     font-size: 0.8rem;
     padding: 0;
     margin: 0;

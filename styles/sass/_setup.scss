@@ -11,7 +11,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 html {
     scroll-behavior: smooth;
     font-size: 125%;
-    overflow-x: hidden;
+    
 }
 
 body {
@@ -20,6 +20,8 @@ body {
     font-family: $nunito;
     font-size: 1rem;
     letter-spacing: 0.05rem;
+    line-height: 140%;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -39,6 +41,7 @@ h1,
 h2,
 h3{
     font-family: $antic ;
+    line-height: 140%;
 }
 h2 {
     margin-bottom: 20px;
@@ -50,15 +53,20 @@ h3 {
 ul {
     list-style: none;
 }
+p {
+    font-size: 0.9rem;
+}
 a {
     text-decoration: none;
     color: $mistyRose;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     transition: all 0.3s ease-in-out;
 
     &:hover,
     &:focus {
-        border-bottom: 2px solid $darkBlue;
+        transform: scale(1.2);
+        border-bottom: 3px solid $darkBlue;
+        text-shadow: 0 0 5px $darkBlue;
     }
 }
 img {

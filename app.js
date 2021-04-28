@@ -31,23 +31,11 @@ app.listAction = () =>  {
     });
 }
 
-//empty form on Submit
-app.formEmpty = () => {
-    app.form.addEventListener('submit', () => {
-        const inputs = document.querySelectorAll('form input');
-        const textarea = document.querySelector('form textarea');
-        inputs.forEach( (input) => {
-            input.value = "";
-        });
-        textarea.value = "";
-    });
-}
 
 //create init and call all function
 app.init = () => {
     app.burgerAction();
     app.listAction();
-    app.formEmpty();
 }
 
 //initial all functions in the app 

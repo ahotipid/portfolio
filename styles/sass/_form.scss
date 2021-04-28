@@ -29,12 +29,13 @@ form {
     button {
         align-self: flex-end;
         cursor: pointer;
-        border-bottom: 1px solid transparent;
+        border-bottom: 3px solid transparent;
         transition: all 0.4s ease-in-out;
         &:hover,
         &:focus {
             color: $darkBlue;
-            border-bottom: 1px solid $darkBlue;
+            border-bottom: 3px solid $darkBlue;
+            text-shadow: 0 0 5px $darkBlue;
         }
     }
     i {
