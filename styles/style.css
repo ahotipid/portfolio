@@ -751,7 +751,7 @@ section .indent {
   padding-bottom: 0;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -45px;
   z-index: -10;
 }
 
