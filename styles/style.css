@@ -545,13 +545,16 @@ header .heading {
   padding: 0;
 }
 
-header .heading h1 {
+header .heading h1,
+header .heading .hello {
   font-size: 3rem;
+}
+
+header .heading h1 {
   margin-bottom: 14px;
 }
 
 header .heading .hello {
-  font-size: 3rem;
   margin-bottom: 0;
 }
 
@@ -640,12 +643,19 @@ section .indent {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .toolkit ul li {
   width: 25%;
-  text-align: left;
+  text-align: center;
   margin: 30px 0;
+}
+
+.toolkit ul p {
+  font-size: 0.8rem;
 }
 
 .toolkit ul i {
@@ -884,7 +894,7 @@ section .indent {
   form {
     width: 100%;
   }
-  .about .indent {
+  .about p {
     width: 100%;
   }
   .portfolio li .contentContainer {
@@ -912,8 +922,20 @@ section .indent {
 }
 
 @media (max-width: 680px) {
+  body {
+    font-size: 0.8rem;
+    letter-spacing: 0rem;
+    line-height: 140%;
+  }
   header .heading {
     margin-left: 10vw;
+  }
+  header .heading h1,
+  header .heading .hello {
+    font-size: 2.5rem;
+  }
+  header .heading h2 {
+    font-size: 1.5rem;
   }
   nav.headMenu ul {
     visibility: hidden;
@@ -938,7 +960,10 @@ section .indent {
     margin-left: 0;
   }
   .toolkit ul li {
-    text-align: center;
+    margin: 15px 0;
+  }
+  .toolkit ul p {
+    font-size: 0.7rem;
   }
   .toolkit ul i {
     font-size: 2rem;

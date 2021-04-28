@@ -32,12 +32,12 @@ app.listAction = () =>  {
 }
 
 //function to animate element on scroll
-app.animationOnScroll = () => {
+app.animationOnWindowScroll = () => {
     window.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('section');
         sections.forEach((section) => {
             const sectionPostion = section.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.7;
+            const screenPosition = window.innerHeight / 1.6;
             if (sectionPostion < screenPosition) {
                 section.classList.add('animateOnScroll');
             } else {
@@ -50,7 +50,7 @@ app.animationOnScroll = () => {
 app.init = () => {
     app.burgerAction();
     app.listAction();
-    app.animationOnScroll();
+    app.animationOnWindowScroll();
 }
 
 //initial all functions in the app 
