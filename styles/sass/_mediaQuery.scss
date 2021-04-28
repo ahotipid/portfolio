@@ -3,7 +3,7 @@
         width: 100%;  
     }
     .about {
-        .indent {
+        p {
             width: 100%;
         }
     }
@@ -34,9 +34,22 @@
     }
 }
 @media (max-width:680px) {
+    body {
+        font-size: 0.8rem;
+        letter-spacing: 0rem;
+        line-height: 140%;
+    }
     header {
         .heading {
             margin-left: 10vw;
+
+            h1,
+            .hello {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
         }
     }
     nav.headMenu ul{
@@ -69,7 +82,10 @@
     .toolkit {
         ul {
             li {
-                text-align: center;
+                margin: 15px 0;
+            }
+            p {
+                font-size: 0.7rem;
             }
             i {
                 font-size: 2rem;
