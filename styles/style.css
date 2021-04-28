@@ -589,11 +589,22 @@ header .heading::before {
 }
 
 section {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 0.75s ease-in;
+  transition: all 0.75s ease-in;
   padding: 40px 0;
 }
 
 section .indent {
   margin-left: 25vw;
+}
+
+.animateOnScroll {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .about .imageContainer {

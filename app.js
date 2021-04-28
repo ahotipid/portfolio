@@ -31,11 +31,26 @@ app.listAction = () =>  {
     });
 }
 
-
+//function to animate element on scroll
+app.animationOnScroll = () => {
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        sections.forEach((section) => {
+            const sectionPostion = section.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.5;
+            if (sectionPostion < screenPosition) {
+                section.classList.add('animateOnScroll');
+            } else {
+                section.classList.remove('animateOnScroll');
+            }
+        });
+    });
+}
 //create init and call all function
 app.init = () => {
     app.burgerAction();
     app.listAction();
+    app.animationOnScroll();
 }
 
 //initial all functions in the app 

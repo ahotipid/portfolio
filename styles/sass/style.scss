@@ -50,10 +50,17 @@ header {
 }
 
 section {
+    opacity: 0;
+    transform:translateY(30px);
+    transition: all 0.75s ease-in;
     padding: 40px 0;
     .indent {
         margin-left: 25vw;
     }
+}
+.animateOnScroll {
+    opacity: 1;
+    transform:translateY(0);
 }
 
 .about {
