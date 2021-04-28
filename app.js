@@ -46,11 +46,14 @@ app.animationOnWindowScroll = () => {
         });
     });
 }
+
+
 //create init and call all function
 app.init = () => {
     app.burgerAction();
     app.listAction();
     app.animationOnWindowScroll();
+    app.findCss();
 }
 
 //initial all functions in the app 

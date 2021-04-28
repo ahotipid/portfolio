@@ -97,7 +97,7 @@ section {
         li {
             width: 25%;
             text-align: center;
-            margin: 30px 0;
+            margin: 40px 0 10px;
         }
         p {
             font-size: 0.8rem;
@@ -114,7 +114,6 @@ section {
     }
 }
 .portfolio {
-    padding-bottom: 0;
     h3 {
         span {
             font-size: 0.8rem;
@@ -125,7 +124,7 @@ section {
     }
     li {
         width: 100%;
-        padding: 30px 0;
+        padding: 50px 0;
         border-top: 1px solid $mistyRose;
         display: flex;
         flex-direction: column;
@@ -138,6 +137,7 @@ section {
         }
         .imageContainer {
             width: 0%;
+            height: 0;
             overflow: hidden;
             transition: all 0.5s ease-in-out;
         }
@@ -165,9 +165,10 @@ section {
         flex-direction: column;
         align-content: flex-start;
         .viewProject {
+            padding-bottom: 0;
             position: absolute;
             right: 0;
-            bottom: -50%;
+            bottom: -45px;
             z-index: -10;
         }
     }
