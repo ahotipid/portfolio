@@ -143,8 +143,7 @@ section {
             padding-bottom: 0;
         }
         &:hover,
-        &:focus,
-        &:active {
+        &:focus {
             color: $darkBlue;
             border-top: 1px solid $darkBlue;
             transform: scale(1.1);

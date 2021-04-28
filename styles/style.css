@@ -715,14 +715,14 @@ section .indent {
   padding-bottom: 0;
 }
 
-.portfolio li:hover, .portfolio li:focus, .portfolio li:active {
+.portfolio li:hover, .portfolio li:focus {
   color: #5667ad;
   border-top: 1px solid #5667ad;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.portfolio li:hover .imageContainer, .portfolio li:focus .imageContainer, .portfolio li:active .imageContainer {
+.portfolio li:hover .imageContainer, .portfolio li:focus .imageContainer {
   width: 50%;
   height: 280px;
 }
