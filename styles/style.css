@@ -601,6 +601,10 @@ section .indent {
   width: 200px;
 }
 
+.about p {
+  width: 70%;
+}
+
 .toolkit ul {
   display: -webkit-box;
   display: -ms-flexbox;
