@@ -20,10 +20,11 @@ header {
         padding: 0;
         h1 {
             font-size: 3rem;
-            padding: 15px 0;
+            margin-bottom: 14px;
         }
         .hello {
             font-size: 3rem;
+            margin-bottom: 0;
         }
     }
     
@@ -112,7 +113,6 @@ section {
         p {
             width: 50%;
             padding-bottom: 0;
-            font-size: 0.8rem;
         }
     }
     li:hover,
@@ -148,6 +148,9 @@ section {
 }
 .contact {
     position: relative;
+    p {
+        width: 70%;
+    }
     a {
         &:hover,
         &:focus {
@@ -161,13 +164,17 @@ section {
         padding: 20px 0;
     }
 
+    .emailAddress {
+        font-size: 1.2rem;
+    }
+
     .socialMedia {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         li {
             padding: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
         li:first-child {
             padding-left: 0;

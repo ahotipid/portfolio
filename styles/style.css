@@ -239,6 +239,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.05rem;
+  line-height: 140%;
   overflow-x: hidden;
 }
 
@@ -260,6 +261,7 @@ h1,
 h2,
 h3 {
   font-family: "Antic Didone", serif;
+  line-height: 140%;
 }
 
 h2 {
@@ -273,6 +275,10 @@ h3 {
 
 ul {
   list-style: none;
+}
+
+p {
+  font-size: 0.9rem;
 }
 
 a {
@@ -540,11 +546,12 @@ header .heading {
 
 header .heading h1 {
   font-size: 3rem;
-  padding: 15px 0;
+  margin-bottom: 14px;
 }
 
 header .heading .hello {
   font-size: 3rem;
+  margin-bottom: 0;
 }
 
 header .heading::before {
@@ -668,7 +675,6 @@ section .indent {
 .portfolio li p {
   width: 50%;
   padding-bottom: 0;
-  font-size: 0.8rem;
 }
 
 .portfolio li:hover,
@@ -719,6 +725,10 @@ section .indent {
   position: relative;
 }
 
+.contact p {
+  width: 70%;
+}
+
 .contact a:hover, .contact a:focus {
   color: #5667ad;
   border-bottom: transparent;
@@ -727,6 +737,10 @@ section .indent {
 .contact h3,
 .contact .emailAddress {
   padding: 20px 0;
+}
+
+.contact .emailAddress {
+  font-size: 1.2rem;
 }
 
 .contact .socialMedia {
@@ -743,7 +757,7 @@ section .indent {
 
 .contact .socialMedia li {
   padding: 20px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .contact .socialMedia li:first-child {
@@ -844,6 +858,9 @@ section .indent {
   .portfolio li:hover .imageContainer,
   .portfolio li:focus .imageContainer {
     width: 70%;
+  }
+  .contact p {
+    width: 100%;
   }
 }
 
