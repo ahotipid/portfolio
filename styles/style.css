@@ -292,6 +292,7 @@ a {
 a:hover, a:focus {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  color: #5667ad;
   border-bottom: 3px solid #5667ad;
   text-shadow: 0 0 5px #5667ad;
 }
@@ -337,11 +338,11 @@ nav.headMenu ul a {
 
 .logo {
   font-family: "Antic Didone", serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #5667ad;
   justify-self: flex-start;
   position: absolute;
-  top: 10px;
+  top: 20px;
   margin: 0;
   padding: 0;
 }
@@ -616,6 +617,20 @@ section .indent {
   width: 70%;
 }
 
+.about .fa-file-alt {
+  font-size: 1.5rem;
+}
+
+.about .resumeLink {
+  margin: 20px 0;
+  width: 70%;
+  text-align: right;
+}
+
+.about .resumeLink:hover, .about .resumeLink:focus {
+  color: #5667ad;
+}
+
 .toolkit ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -629,7 +644,7 @@ section .indent {
 
 .toolkit ul li {
   width: 25%;
-  text-align: center;
+  text-align: left;
   margin: 30px 0;
 }
 
@@ -637,8 +652,16 @@ section .indent {
   font-size: 2.5rem;
 }
 
+.toolkit ul .fa-desktop {
+  font-size: 2.2rem;
+}
+
 .toolkit ul .fa-mobile-alt {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.portfolio {
+  padding-bottom: 0;
 }
 
 .portfolio h3 span {
@@ -670,9 +693,9 @@ section .indent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
 }
 
@@ -687,7 +710,7 @@ section .indent {
   width: 50%;
 }
 
-.portfolio li p {
+.portfolio li .content {
   width: 50%;
   padding-bottom: 0;
 }
@@ -706,15 +729,23 @@ section .indent {
   height: 280px;
 }
 
-.portfolio .contentContainer {
+.portfolio .content {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
-.portfolio .contentContainer .viewProject {
-  font-size: 0.8rem;
+.portfolio .content .viewProject {
   position: absolute;
   right: 0;
-  bottom: -30%;
+  bottom: -50%;
   z-index: -10;
 }
 
@@ -772,7 +803,7 @@ section .indent {
 
 .contact .socialMedia li {
   padding: 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .contact .socialMedia li:first-child {
@@ -795,6 +826,18 @@ section .indent {
   right: 0;
   -webkit-animation: bounce 2s ease-in-out infinite;
           animation: bounce 2s ease-in-out infinite;
+}
+
+.downArrow:hover, .downArrow:focus,
+.scrollUp:hover,
+.scrollUp:focus {
+  color: #5667ad;
+  border-bottom: transparent;
+}
+
+.downArrow i,
+.scrollUp i {
+  font-size: 1.2rem;
 }
 
 @-webkit-keyframes bounce {
@@ -827,18 +870,6 @@ section .indent {
   }
 }
 
-.downArrow:hover, .downArrow:focus,
-.scrollUp:hover,
-.scrollUp:focus {
-  color: #5667ad;
-  border-bottom: transparent;
-}
-
-.downArrow i,
-.scrollUp i {
-  font-size: 1.2rem;
-}
-
 .downArrow {
   color: #ffe1d9;
   font-size: 1.2rem;
@@ -855,6 +886,9 @@ section .indent {
   form {
     width: 100%;
   }
+  .about .indent {
+    width: 100%;
+  }
   .portfolio li .contentContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -867,7 +901,7 @@ section .indent {
   .portfolio li h3 {
     width: 100%;
   }
-  .portfolio li p {
+  .portfolio li .content {
     width: 100%;
   }
   .portfolio li:hover .imageContainer,
@@ -895,7 +929,7 @@ section .indent {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 540px) {
   header .heading {
     margin-left: 0;
   }
@@ -904,6 +938,18 @@ section .indent {
   }
   section div.indent {
     margin-left: 0;
+  }
+  .toolkit ul li {
+    text-align: center;
+  }
+  .toolkit ul i {
+    font-size: 2rem;
+  }
+  .toolkit ul .fa-desktop {
+    font-size: 1.8rem;
+  }
+  .toolkit ul .fa-mobile-alt {
+    font-size: 1.2rem;
   }
   footer {
     -webkit-box-orient: vertical;

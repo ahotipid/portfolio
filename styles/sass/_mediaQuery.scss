@@ -2,6 +2,11 @@
     form {
         width: 100%;  
     }
+    .about {
+        .indent {
+            width: 100%;
+        }
+    }
     .portfolio {
         li {
             .contentContainer {
@@ -11,7 +16,7 @@
             h3 {
                 width: 100%;
             }
-            p {
+            .content {
                 width: 100%;
             }
         }
@@ -49,7 +54,7 @@
         }
     }
 }
-@media (max-width:520px) {
+@media (max-width:540px) {
     header {
         .heading {
             margin-left: 0;
@@ -59,6 +64,22 @@
         padding: 40px 0;
         div.indent {
             margin-left: 0;
+        }
+    }
+    .toolkit {
+        ul {
+            li {
+                text-align: center;
+            }
+            i {
+                font-size: 2rem;
+            }
+            .fa-desktop {
+                font-size: 1.8rem;
+            }
+            .fa-mobile-alt {
+                font-size: 1.2rem;
+            }
         }
     }
     footer {

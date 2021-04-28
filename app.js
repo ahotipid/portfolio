@@ -37,7 +37,7 @@ app.animationOnScroll = () => {
         const sections = document.querySelectorAll('section');
         sections.forEach((section) => {
             const sectionPostion = section.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.5;
+            const screenPosition = window.innerHeight / 1.7;
             if (sectionPostion < screenPosition) {
                 section.classList.add('animateOnScroll');
             } else {

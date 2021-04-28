@@ -71,7 +71,21 @@ section {
     p {
         width: 70%;
     }
+    .fa-file-alt {
+        font-size: 1.5rem;
+    }
+    .resumeLink {
+        margin: 20px 0;
+        width: 70%;
+        text-align: right;
+        &:hover,
+        &:focus {
+            color: $darkBlue;
+        }
+    }
 }
+
+
 .toolkit {
     ul {
         display: flex;
@@ -79,18 +93,22 @@ section {
         justify-content: center;
         li {
             width: 25%;
-            text-align: center;
+            text-align: left;
             margin: 30px 0;
         }
         i {
             font-size: 2.5rem;
         }
+        .fa-desktop {
+            font-size: 2.2rem;
+        }
         .fa-mobile-alt {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
     }
 }
 .portfolio {
+    padding-bottom: 0;
     h3 {
         span {
             font-size: 0.8rem;
@@ -109,7 +127,7 @@ section {
         transition: all 0.5s ease-in-out;
         .contentContainer {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             width: 100%;
         }
         .imageContainer {
@@ -120,7 +138,7 @@ section {
         h3 {
             width: 50%;
         }
-        p {
+        .content{
             width: 50%;
             padding-bottom: 0;
         }
@@ -135,13 +153,15 @@ section {
             height: 280px;
         }
     }
-    .contentContainer {
+    .content {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
         .viewProject {
-            font-size: 0.8rem;
             position: absolute;
             right: 0;
-            bottom: -30%;
+            bottom: -50%;
             z-index: -10;
         }
     }
@@ -184,7 +204,7 @@ section {
         align-items: center;
         li {
             padding: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
         li:first-child {
             padding-left: 0;
@@ -207,17 +227,6 @@ section {
     right: 0;
     animation: bounce 2s ease-in-out infinite;
 
-    @keyframes bounce {
-        0% {
-            transform: translateY(-5px);
-        }
-        50% {
-            transform: translateY(-13px);
-        }
-        100% {
-            transform: translateY(-5px);
-        }
-    }
     &:hover,
     &:focus {
         color: $darkBlue;
@@ -225,6 +234,18 @@ section {
     }
     i {
         font-size: 1.2rem;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(-13px);
+    }
+    100% {
+        transform: translateY(-5px);
     }
 }
 
