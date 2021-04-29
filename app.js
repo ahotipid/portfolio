@@ -46,22 +46,29 @@ app.animationOnWindowScroll = () => {
     });
 }
 
-//function to make touchscreen toggole hover state on list in portfolio
-app.listHover = () => {
+//function to make touchscreen toggole hover state on list in portfolio by touch
+app.listHoverOnTouch = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
     portfolioLists.forEach( (portfolioList) => {
-        portfolioList.addEventListener('touchstart' , ()=>{
-            //toggle hover effect when touch on each list
-            portfolioList.classList.toggle('hoverEffect');
+        portfolioList.addEventListener('touchstart' , function (){
+            if (this.className === 'hoverEffect') {
+                this.classList.remove('hoverEffect');
+            } else{
+                portfolioLists.forEach( (list) => {
+                    list.classList.remove('hoverEffect');
+                });
+                this.classList.add('hoverEffect');
+            }
         });
     });
+    
 }
 //create init and call all function
 app.init = () => {
     app.burgerAction();
     app.menuAction();
     app.animationOnWindowScroll();
-    app.listHover();
+    app.listHoverOnTouch();
 }
 
 //initial all functions in the app 
