@@ -26,6 +26,10 @@ form {
         scrollbar-color: $darkBlue $black;
         
     }
+    .reCaptcha {
+        margin: 10px 0;
+        align-self: flex-end;
+    }
     button {
         align-self: flex-end;
         cursor: pointer;
