@@ -73,17 +73,16 @@ section {
     p {
         width: 70%;
     }
-    .fa-file-alt {
-        font-size: 1.5rem;
-    }
+    
     .resumeLink {
-        margin: 20px 0;
-        width: 70%;
-        text-align: right;
+        width: 100%;
         &:hover,
         &:focus {
             color: $darkBlue;
         }
+    }
+    .fa-file-alt {
+        font-size: 1.5rem;
     }
 }
 

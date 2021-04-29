@@ -627,18 +627,16 @@ section .indent {
   width: 70%;
 }
 
-.about .fa-file-alt {
-  font-size: 1.5rem;
-}
-
 .about .resumeLink {
-  margin: 20px 0;
-  width: 70%;
-  text-align: right;
+  width: 100%;
 }
 
 .about .resumeLink:hover, .about .resumeLink:focus {
   color: #5667ad;
+}
+
+.about .fa-file-alt {
+  font-size: 1.5rem;
 }
 
 .toolkit ul {
@@ -932,9 +930,11 @@ section .indent {
 
 @media (max-width: 680px) {
   body {
-    font-size: 0.8rem;
     letter-spacing: 0rem;
     line-height: 140%;
+  }
+  p {
+    font-size: 0.8rem;
   }
   header .heading {
     margin-left: 10vw;
@@ -959,6 +959,9 @@ section .indent {
 }
 
 @media (max-width: 540px) {
+  p {
+    font-size: 0.7rem;
+  }
   header .heading {
     margin-left: 0;
   }
