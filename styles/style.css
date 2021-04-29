@@ -290,8 +290,6 @@ a {
 }
 
 a:hover, a:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   color: #5667ad;
   border-bottom: 3px solid #5667ad;
   text-shadow: 0 0 5px #5667ad;
@@ -618,9 +616,33 @@ section .indent {
           transform: translateY(0);
 }
 
+.about .indent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about .imageContainer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-left: 0;
-  width: 200px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.about .imageContainer .blurredEdge {
+  position: absolute;
+  z-index: 10px;
+  width: inherit;
+  height: inherit;
+  -webkit-box-shadow: 0 0 15px 15px #12141c inset;
+          box-shadow: 0 0 15px 15px #12141c inset;
 }
 
 .about p {
@@ -628,7 +650,8 @@ section .indent {
 }
 
 .about .resumeLink {
-  width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .about .resumeLink:hover, .about .resumeLink:focus {
@@ -959,9 +982,6 @@ section .indent {
 }
 
 @media (max-width: 540px) {
-  p {
-    font-size: 0.7rem;
-  }
   header .heading {
     margin-left: 0;
   }

@@ -66,16 +66,30 @@ section {
 }
 
 .about {
+    .indent {
+        display: flex;
+        flex-direction: column;
+    }
     .imageContainer {
+        align-self: center;
         margin-left: 0;
-        width: 200px;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        .blurredEdge {
+            position: absolute;
+            z-index: 10px;
+            width: inherit;
+            height: inherit;
+            box-shadow: 0 0 15px 15px $black inset;
+        }
     }
     p {
         width: 70%;
     }
     
     .resumeLink {
-        width: 100%;
+        align-self: flex-start;
         &:hover,
         &:focus {
             color: $darkBlue;
