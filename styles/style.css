@@ -475,6 +475,12 @@ form textarea {
   resize: none;
   height: 200px;
   scrollbar-color: #5667ad #12141c;
+  margin-bottom: 20px;
+}
+
+form .reCaptcha {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 form button {
