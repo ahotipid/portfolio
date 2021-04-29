@@ -52,7 +52,9 @@ app.listHoverOnTouch = () => {
     portfolioLists.forEach( (portfolioList) => {
         portfolioList.addEventListener('touchstart' , function() {
             if (this.className === 'hoverEffect') {
-                this.classList.toggle('hoverEffect');
+                portfolioLists.forEach( (list) => {
+                    list.classList.remove('hoverEffect');
+                });
             } else{
                 portfolioLists.forEach( (list) => {
                     list.classList.remove('hoverEffect');
