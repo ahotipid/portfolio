@@ -24,11 +24,9 @@ form {
         resize: none;
         height: 200px;
         scrollbar-color: $darkBlue $black;
-        
+        margin-bottom: 20px;
     }
     .reCaptcha {
-        
-        margin: 10px 0;
         align-self: flex-end;
     }
     button {
