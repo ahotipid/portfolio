@@ -50,7 +50,7 @@ app.animationOnWindowScroll = () => {
 app.listHover = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
     portfolioLists.forEach( (portfolioList) => {
-        portfolioList.addEventListener( 'touchstart touchend' , ()=>{
+        portfolioList.addEventListener('touchstart' , ()=>{
             //toggle hover effect when touch on each list
             portfolioList.classList.toggle('hoverEffect');
         });
