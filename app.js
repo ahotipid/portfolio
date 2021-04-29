@@ -50,14 +50,14 @@ app.animationOnWindowScroll = () => {
 app.listHoverOnTouch = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
     portfolioLists.forEach( (portfolioList) => {
-        portfolioList.addEventListener('touchstart' , function (){
-            if (portfolioList.className === 'hoverEffect') {
-                portfolioList.classList.remove('hoverEffect');
+        portfolioList.addEventListener('touchstart' , function() {
+            if (this.className === 'hoverEffect') {
+                this.classList.remove('hoverEffect');
             } else{
                 portfolioLists.forEach( (list) => {
                     list.classList.remove('hoverEffect');
                 });
-                portfolioList.classList.add('hoverEffect');
+                this.classList.add('hoverEffect');
             }
         });
     });
