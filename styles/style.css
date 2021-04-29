@@ -474,7 +474,7 @@ form button {
 form textarea {
   resize: none;
   height: 200px;
-  scrollbar-color: #bbbbbb;
+  scrollbar-color: #5667ad #12141c;
 }
 
 form button {
@@ -594,10 +594,10 @@ header .heading::before {
 
 section {
   opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: all 0.75s ease-in;
-  transition: all 0.75s ease-in;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
   padding: 40px 0;
 }
 

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kornthip (Tip) Sangsuriyachot's portfolio">
+    <meta name="author" content="Kornthip Sangsuriyachot">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./asset/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Nunito:wght@400;700&display=swap"
         rel="stylesheet">
@@ -164,14 +167,16 @@
             <h2>Let's talk</h2>
             <div class="indent">
                 <p>Either a small talk or a serious project, I would love to here from you. Anything from kitchen to designing to coding, I would love to collab with you. Let's talk and make some impact!</p>
-                <form action="https://formspree.io/f/mzbydbqa" method="POST">
+                <form name="let's talk" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                     <label for="name" class="sr-only">Name</label>
-                    <input type="text" id="name" name="username" placeholder="Name *" required>
+                    <input type="text" id="name" name="name" placeholder="Name *" required>
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" id="email" name="_replyto" placeholder="Email *" required>
+                    <input type="email" id="email" name="email" placeholder="Email *" required>
                     <label for="message" class="sr-only">message</label>
                     <textarea name="message" id="message" name="message" placeholder="Start a conversation * " required></textarea>
+                    <div class="reCaptcha" data-netlify-recaptcha="true"></div>
                     <button type="submit">Send <i class="fas fa-angle-double-right" aria-hidden="true"></i></button>
+                    
                 </form>
                 <h3>Contact</h3>
                 <a class="emailAddress" href="mailto:sang.kornthip@gmail.com">sang.kornthip@gmail.com</a>
