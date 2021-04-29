@@ -148,15 +148,17 @@ section {
             width: 50%;
             padding-bottom: 0;
         }
-        &:hover,
-        &:focus {
-            color: $darkBlue;
-            border-top: 1px solid $darkBlue;
-            transform: scale(1.1);
-            .imageContainer {
-                width: 50%;
-                height: 280px;
-            }
+        
+    }
+    li:hover,
+    li:focus,
+    .hoverEffect {
+        color: $darkBlue;
+        border-top: 1px solid $darkBlue;
+        transform: scale(1.1);
+        .imageContainer {
+            width: 50%;
+            height: 280px;
         }
     }
     .content {
