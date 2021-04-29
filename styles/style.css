@@ -290,8 +290,6 @@ a {
 }
 
 a:hover, a:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   color: #5667ad;
   border-bottom: 3px solid #5667ad;
   text-shadow: 0 0 5px #5667ad;
@@ -618,27 +616,50 @@ section .indent {
           transform: translateY(0);
 }
 
+.about .indent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about .imageContainer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-left: 0;
-  width: 200px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.about .imageContainer .blurredEdge {
+  position: absolute;
+  z-index: 10px;
+  width: inherit;
+  height: inherit;
+  -webkit-box-shadow: 0 0 15px 15px #12141c inset;
+          box-shadow: 0 0 15px 15px #12141c inset;
 }
 
 .about p {
   width: 70%;
 }
 
-.about .fa-file-alt {
-  font-size: 1.5rem;
-}
-
 .about .resumeLink {
-  margin: 20px 0;
-  width: 70%;
-  text-align: right;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .about .resumeLink:hover, .about .resumeLink:focus {
   color: #5667ad;
+}
+
+.about .fa-file-alt {
+  font-size: 1.5rem;
 }
 
 .toolkit ul {
@@ -729,14 +750,18 @@ section .indent {
   padding-bottom: 0;
 }
 
-.portfolio li:hover, .portfolio li:focus {
+.portfolio li:hover,
+.portfolio li:focus,
+.portfolio .hoverEffect {
   color: #5667ad;
   border-top: 1px solid #5667ad;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.portfolio li:hover .imageContainer, .portfolio li:focus .imageContainer {
+.portfolio li:hover .imageContainer,
+.portfolio li:focus .imageContainer,
+.portfolio .hoverEffect .imageContainer {
   width: 50%;
   height: 280px;
 }
@@ -928,9 +953,11 @@ section .indent {
 
 @media (max-width: 680px) {
   body {
-    font-size: 0.8rem;
     letter-spacing: 0rem;
     line-height: 140%;
+  }
+  p {
+    font-size: 0.8rem;
   }
   header .heading {
     margin-left: 10vw;

@@ -1,6 +1,5 @@
 const app = {}
 
-// ///////////////burger menu function/////////////////
 //declare variable for icon and  menu list
 app.burgerMenu = document.querySelector('nav.burgerMenu ul');
 app.burgerMenuLists = document.querySelectorAll('nav.burgerMenu li');
@@ -19,7 +18,7 @@ app.burgerAction = () => {
 }
 
 //add event lister to burger menu list
-app.listAction = () =>  {
+app.menuAction = () =>  {
     //make each list to trigger transform on burger icon and ul height
     app.burgerMenuLists.forEach( (list) => {
         list.addEventListener('click', () => {
@@ -47,13 +46,22 @@ app.animationOnWindowScroll = () => {
     });
 }
 
-
+//function to make touchscreen toggole hover state on list in portfolio
+app.listHover = () => {
+    const portfolioLists = document.querySelectorAll('.portfolio li');
+    portfolioLists.forEach( (portfolioList) => {
+        portfolioList.addEventListener('touchstart' , ()=>{
+            //toggle hover effect when touch on each list
+            portfolioList.classList.toggle('hoverEffect');
+        });
+    });
+}
 //create init and call all function
 app.init = () => {
     app.burgerAction();
-    app.listAction();
+    app.menuAction();
     app.animationOnWindowScroll();
-    app.findCss();
+    app.listHover();
 }
 
 //initial all functions in the app 
