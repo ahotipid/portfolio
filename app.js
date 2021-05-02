@@ -49,34 +49,16 @@ app.animationOnWindowScroll = () => {
 //function to make touchscreen toggole hover state on list in portfolio by touch
 app.displayProjectOnTouch = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
-    const projectImages = document.querySelectorAll('.portfolio img')
     portfolioLists.forEach( (portfolioList) => {
-        portfolioList.addEventListener('click' , function() {
-            
-            // if (this.className === 'hoverEffect') {
-            //     portfolioLists.forEach( (list) => {
-            //         list.classList.remove('hoverEffect');
-            //     });
-            // } else{
+        portfolioList.addEventListener('touchstart' , function() {
+            if (this.className === 'hoverEffect') {
+                    this.classList.remove('hoverEffect');
+            } else{
                 portfolioLists.forEach( (list) => {
                     list.classList.remove('hoverEffect');
                 });
                 this.classList.add('hoverEffect');
-            // }
-        });
-    });
-    projectImages.forEach( (image) => {
-        image.addEventListener('click' , function() {
-            
-            // if (this.className === 'hoverEffect') {
-            //     portfolioLists.forEach( (list) => {
-            //         list.classList.remove('hoverEffect');
-            //     });
-            // } else{
-                portfolioLists.forEach( (list) => {
-                    list.classList.remove('hoverEffect');
-                });
-            // }
+            }
         });
     });
 }
