@@ -50,7 +50,7 @@ app.animationOnWindowScroll = () => {
 app.listHoverOnTouch = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
     portfolioLists.forEach( (portfolioList) => {
-        portfolioList.addEventListener('touchstart' , function() {
+        portfolioList.addEventListener('click' , function() {
             if (this.className === 'hoverEffect') {
                 portfolioLists.forEach( (list) => {
                     list.classList.remove('hoverEffect');
