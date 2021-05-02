@@ -50,9 +50,15 @@ app.animationOnWindowScroll = () => {
 app.displayProjectOnTouch = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
     portfolioLists.forEach( (portfolioList) => {
-        portfolioList.addEventListener('click' , function() {
-                    this.classList.toggle('hoverEffect');
-            
+        portfolioList.addEventListener('touchstart' , function() {
+            if (this.className === 'hoverEffect') {
+                    this.classList.remove('hoverEffect');
+            } else{
+                portfolioLists.forEach( (list) => {
+                    list.classList.remove('hoverEffect');
+                });
+                this.classList.add('hoverEffect');
+            }
         });
     });
 }
