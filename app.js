@@ -47,30 +47,45 @@ app.animationOnWindowScroll = () => {
 }
 
 //function to make touchscreen toggole hover state on list in portfolio by touch
-app.listHoverOnTouch = () => {
+app.displayProjectOnTouch = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
+    const projectImages = document.querySelectorAll('.portfolio img')
     portfolioLists.forEach( (portfolioList) => {
         portfolioList.addEventListener('click' , function() {
-            if (this.className === 'hoverEffect') {
-                portfolioLists.forEach( (list) => {
-                    list.classList.remove('hoverEffect');
-                });
-            } else{
+            
+            // if (this.className === 'hoverEffect') {
+            //     portfolioLists.forEach( (list) => {
+            //         list.classList.remove('hoverEffect');
+            //     });
+            // } else{
                 portfolioLists.forEach( (list) => {
                     list.classList.remove('hoverEffect');
                 });
                 this.classList.add('hoverEffect');
-            }
+            // }
         });
     });
-    
+    projectImages.forEach( (image) => {
+        image.addEventListener('click' , function() {
+            
+            // if (this.className === 'hoverEffect') {
+            //     portfolioLists.forEach( (list) => {
+            //         list.classList.remove('hoverEffect');
+            //     });
+            // } else{
+                portfolioLists.forEach( (list) => {
+                    list.classList.remove('hoverEffect');
+                });
+            // }
+        });
+    });
 }
 //create init and call all function
 app.init = () => {
     app.burgerAction();
     app.menuAction();
     app.animationOnWindowScroll();
-    app.listHoverOnTouch();
+    app.displayProjectOnTouch();
 }
 
 //initial all functions in the app 
