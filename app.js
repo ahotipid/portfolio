@@ -51,8 +51,8 @@ app.displayProjectOnTouch = () => {
     const portfolioLists = document.querySelectorAll('.portfolio li');
     portfolioLists.forEach( (portfolioList) => {
         portfolioList.addEventListener('touchstart' , function() {
-            if (this.className === 'hoverEffect') {
-                    this.classList.remove('hoverEffect');
+            if (this.className == 'hoverEffect') {
+                    this.classList.toggle('hoverEffect');
             } else{
                 portfolioLists.forEach( (list) => {
                     list.classList.remove('hoverEffect');
