@@ -309,16 +309,15 @@ nav.headMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 nav.headMenu ul {
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,20 +328,31 @@ nav.headMenu ul li {
   margin: 0 10px;
 }
 
+nav.headMenu ul li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
 nav.headMenu ul a {
   padding: 5px 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .logo {
   font-family: "Antic Didone", serif;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: #5667ad;
-  justify-self: flex-start;
-  position: absolute;
-  top: 20px;
   margin: 0;
-  padding: 0;
+  padding: 7px;
+  border-radius: 50%;
+  background-color: #ffe1d9;
+  border-bottom: none;
+}
+
+.logo:hover, .logo:focus {
+  -webkit-box-shadow: 0 0 10px #ffe1d9;
+          box-shadow: 0 0 10px #ffe1d9;
+  border-bottom: none;
 }
 
 nav.burgerMenu {
@@ -498,7 +508,7 @@ form button:hover, form button:focus {
 }
 
 form i {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 footer {
@@ -546,7 +556,7 @@ header {
 
 header .heading {
   position: relative;
-  margin-left: 25vw;
+  margin-left: 25%;
   padding: 0;
 }
 
@@ -607,7 +617,7 @@ section {
 }
 
 section .indent {
-  margin-left: 25vw;
+  margin-left: 25%;
 }
 
 .animateOnScroll {
@@ -616,7 +626,8 @@ section .indent {
           transform: translateY(0);
 }
 
-.about .indent {
+.about .indent .aboutMe {
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,13 +635,15 @@ section .indent {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about .imageContainer {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-left: 0;
   width: 300px;
   height: 300px;
   position: relative;
@@ -645,13 +658,11 @@ section .indent {
           box-shadow: 0 0 15px 15px #12141c inset;
 }
 
-.about p {
-  width: 70%;
-}
-
 .about .resumeLink {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  display: block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 20px;
 }
 
 .about .resumeLink:hover, .about .resumeLink:focus {
@@ -679,7 +690,7 @@ section .indent {
 .toolkit ul li {
   width: 25%;
   text-align: center;
-  margin: 40px 0 10px;
+  margin: 20px 0 10px;
 }
 
 .toolkit ul p {
@@ -875,7 +886,7 @@ section .indent {
 
 .downArrow i,
 .scrollUp i {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 @-webkit-keyframes bounce {
@@ -913,18 +924,18 @@ section .indent {
   font-size: 1.2rem;
   position: absolute;
   right: 0;
-  bottom: 40px;
+  bottom: 50px;
 }
 
 .downArrow i {
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 
 @media (max-width: 950px) {
   form {
     width: 100%;
   }
-  .about p {
+  .about .indent .aboutMe {
     width: 100%;
   }
   .portfolio li .contentContainer {
@@ -992,7 +1003,7 @@ section .indent {
     margin-left: 0;
   }
   .toolkit ul li {
-    margin: 15px 0;
+    margin: 10px 0;
   }
   .toolkit ul p {
     font-size: 0.7rem;

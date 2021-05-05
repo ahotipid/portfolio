@@ -3,8 +3,10 @@
         width: 100%;  
     }
     .about {
-        p {
-            width: 100%;
+        .indent{
+            .aboutMe {
+                width: 100%;
+            }
         }
     }
     .portfolio {
@@ -84,7 +86,7 @@
     .toolkit {
         ul {
             li {
-                margin: 15px 0;
+                margin: 10px 0;
             }
             p {
                 font-size: 0.7rem;
