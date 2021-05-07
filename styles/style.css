@@ -350,6 +350,8 @@ nav.headMenu ul a {
 }
 
 .logo:hover, .logo:focus {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
   -webkit-box-shadow: 0 0 10px #ffe1d9;
           box-shadow: 0 0 10px #ffe1d9;
   border-bottom: none;
