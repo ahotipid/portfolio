@@ -1,2 +1,2 @@
 # portfolio
-view live https://kornthip.netlify.app/
+view live [here](https://kornthip.netlify.app/)
