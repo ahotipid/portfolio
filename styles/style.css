@@ -661,9 +661,9 @@ section .indent {
 }
 
 .about .resumeLink {
-  display: block;
+  /* display: block; */
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   margin-top: 20px;
 }
 
