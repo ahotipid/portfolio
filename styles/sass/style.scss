@@ -73,6 +73,9 @@ section {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            p {
+                text-align: justify;
+            }
         }
     }
     .imageContainer {
@@ -87,7 +90,6 @@ section {
             box-shadow: 0 0 15px 15px $black inset;
         }
     }
-    
     .resumeLink {
         display: block;
         align-self: flex-end;
